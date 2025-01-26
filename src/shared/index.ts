@@ -12,5 +12,6 @@ export {useThemeColors} from './hooks/useThemeColors';
 //ui
 export {LocationMarkIcon} from './ui/icons/LocationMarkIcon';
 export {ArrowBottomIcon} from './ui/icons/ArrowBottomIcon';
+export {ThemedTouchableOpacity} from './ui/theme/ThemedTouchableOpacity';
 export {ThemedText} from './ui/theme/ThemedText';
 export {ThemedView} from './ui/theme/ThemedView';

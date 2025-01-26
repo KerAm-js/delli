@@ -1,21 +1,22 @@
 import {FC} from 'react';
-import {View, ViewProps} from 'react-native';
+import {TouchableOpacity, TouchableOpacityProps} from 'react-native';
 import {ColorName} from '../../consts/colors';
 import {useThemeColors} from '../../hooks/useThemeColors';
 
-type PropTypes = ViewProps & {
+type PropTypes = TouchableOpacityProps & {
   colorName: ColorName;
+  style?: TouchableOpacityProps['style'];
   darkThemeColorName?: ColorName;
-  darkThemeStyle?: ViewProps['style'];
+  darkThemeStyle?: TouchableOpacityProps['style'];
   borderColorName?: ColorName;
 };
 
-export const ThemedView: FC<PropTypes> = ({
+export const ThemedTouchableOpacity: FC<PropTypes> = ({
   colorName,
   borderColorName,
   darkThemeColorName,
-  style,
   darkThemeStyle,
+  style,
   children,
   ...props
 }) => {
@@ -34,8 +35,8 @@ export const ThemedView: FC<PropTypes> = ({
   ];
 
   return (
-    <View style={styles} {...props}>
+    <TouchableOpacity style={styles} {...props}>
       {children}
-    </View>
+    </TouchableOpacity>
   );
 };

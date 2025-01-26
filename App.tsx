@@ -6,19 +6,16 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  StatusBar,
-} from 'react-native';
+import {SafeAreaView, StatusBar} from 'react-native';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
 
 function App(): React.JSX.Element {
-
   return (
-    <SafeAreaView>
-      <StatusBar
-        barStyle={'dark-content'}
-      />
-    </SafeAreaView>
+    <SafeAreaProvider>
+      <SafeAreaView>
+        <StatusBar barStyle={'dark-content'} />
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
 
