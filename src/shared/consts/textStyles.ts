@@ -61,9 +61,9 @@ export const TEXT_STYLES: { [key in TKey]: TextStyle } = {
     lineHeight: 19,
   },
   ultraSmall: {
-    fontSize: 12,
+    fontSize: 13,
     fontWeight: "medium",
     fontFamily: "Gilroy-medium",
-    lineHeight: 14,
+    lineHeight: 15,
   },
 };

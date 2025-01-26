@@ -7,7 +7,7 @@ export const GoChangeAddress = () => {
   return (
     <View style={styles.container}>
       <ThemedIcon iconComponent={LocationMarkIcon} />
-      <ThemedText style={styles.address}>ул. С-Х Яндарова, 250</ThemedText>
+      <ThemedText colorName="textGrey" style={styles.address}>ул. С-Х Яндарова, 250</ThemedText>
       <ThemedIcon iconComponent={ArrowBottomIcon} />
     </View>
   );

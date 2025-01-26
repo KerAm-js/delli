@@ -3,7 +3,7 @@ type ColorSet = {
   accent: string;
   background: string;
   backgroundSecond: string;
-  grey: string;
+  green: string;
   textGrey: string;
   lineGrey: string;
   header: string;
@@ -22,7 +22,7 @@ export const THEME_COLORS: {[key in Theme]: ColorSet} = {
     text: `#000`,
     background: '#fff',
     backgroundSecond: '#f2f3f4',
-    grey: '#007048',
+    green: '#007048',
     textGrey: 'rgba(0, 0, 0, 0.4)',
     lineGrey: 'rgba(0, 0, 0, 0.1)',
     header: '#f2f3f4',
@@ -32,7 +32,7 @@ export const THEME_COLORS: {[key in Theme]: ColorSet} = {
     text: `#fff`,
     background: '#1e1e1e',
     backgroundSecond: 'rgba(250, 250, 250, 0.07)',
-    grey: '#00FAA0',
+    green: '#00FAA0',
     textGrey: 'rgba(250, 250, 250, 0.4)',
     lineGrey: 'rgba(250, 250, 250, 0.1)',
     header: 'rgba(250, 250, 250, 0.07)',
