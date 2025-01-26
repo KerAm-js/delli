@@ -4,9 +4,8 @@
  *
  * @format
  */
-
 import React from 'react';
-import {SafeAreaView, StatusBar} from 'react-native';
+import {SafeAreaView, StatusBar, View} from 'react-native';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 
 function App(): React.JSX.Element {

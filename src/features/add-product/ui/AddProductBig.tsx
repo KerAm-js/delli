@@ -2,6 +2,7 @@ import {
   SCREEN_PADDING_HORIZONTAL,
   ThemedText,
   ThemedTouchableOpacity,
+  ThemedView,
 } from '@/shared';
 import {TEXT_STYLES} from '@/shared/consts/textStyles';
 import {useSafeAreaPaddings} from '@/shared/hooks/useSafeAreaPaddings';
@@ -24,7 +25,10 @@ export const AddProductBig = () => {
   };
 
   return (
-    <View style={[styles.container, {paddingBottom}]}>
+    <ThemedView
+      colorName="background"
+      borderColorName="lineGrey"
+      style={[styles.container, {paddingBottom}]}>
       <ThemedText style={styles.totalCost}>{PRICE} ₽</ThemedText>
       <View style={styles.buttonsContainer}>
         {count ? (
@@ -33,8 +37,7 @@ export const AddProductBig = () => {
               style={styles.smallButton}
               colorName="accent"
               onPress={decrement}
-              hitSlop={BUTTON_HIT_SLOP}
-            >
+              hitSlop={BUTTON_HIT_SLOP}>
               <ThemedText colorName="background" style={styles.buttonText}>
                 -
               </ThemedText>
@@ -44,8 +47,7 @@ export const AddProductBig = () => {
               style={styles.smallButton}
               colorName="accent"
               onPress={increment}
-              hitSlop={BUTTON_HIT_SLOP}
-            >
+              hitSlop={BUTTON_HIT_SLOP}>
               <ThemedText colorName="background" style={styles.buttonText}>
                 +
               </ThemedText>
@@ -63,7 +65,7 @@ export const AddProductBig = () => {
           </ThemedTouchableOpacity>
         )}
       </View>
-    </View>
+    </ThemedView>
   );
 };
 
@@ -78,6 +80,7 @@ const styles = StyleSheet.create({
     width: '100%',
     paddingTop: 12,
     backgroundColor: '#fff',
+    borderTopWidth: 1,
   },
   totalCost: {
     ...TEXT_STYLES.title,
