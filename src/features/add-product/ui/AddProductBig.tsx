@@ -9,6 +9,7 @@ import {useState} from 'react';
 import {StyleSheet, View} from 'react-native';
 
 const PRICE = 100;
+const BUTTON_HIT_SLOP = 3;
 
 export const AddProductBig = () => {
   const {paddingBottom} = useSafeAreaPaddings();
@@ -31,7 +32,9 @@ export const AddProductBig = () => {
             <ThemedTouchableOpacity
               style={styles.smallButton}
               colorName="accent"
-              onPress={decrement}>
+              onPress={decrement}
+              hitSlop={BUTTON_HIT_SLOP}
+            >
               <ThemedText colorName="background" style={styles.buttonText}>
                 -
               </ThemedText>
@@ -40,7 +43,9 @@ export const AddProductBig = () => {
             <ThemedTouchableOpacity
               style={styles.smallButton}
               colorName="accent"
-              onPress={increment}>
+              onPress={increment}
+              hitSlop={BUTTON_HIT_SLOP}
+            >
               <ThemedText colorName="background" style={styles.buttonText}>
                 +
               </ThemedText>
@@ -51,7 +56,7 @@ export const AddProductBig = () => {
             onPress={increment}
             colorName="accent"
             style={styles.bigButton}
-            hitSlop={{top: 11, bottom: 11}}>
+            hitSlop={BUTTON_HIT_SLOP}>
             <ThemedText colorName="background" style={styles.buttonText}>
               +
             </ThemedText>

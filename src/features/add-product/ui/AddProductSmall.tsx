@@ -2,6 +2,8 @@ import {ThemedText, ThemedTouchableOpacity} from '@/shared';
 import {useEffect, useState} from 'react';
 import {StyleSheet, View} from 'react-native';
 
+const BUTTON_HIT_SLOP = 11;
+
 export const AddProductSmall = () => {
   const [count, setCount] = useState<number>(0);
 
@@ -23,14 +25,16 @@ export const AddProductSmall = () => {
         <ThemedTouchableOpacity
           style={styles.circleButton}
           colorName="backgroundSecond"
-          onPress={decrement}>
+          onPress={decrement}
+          hitSlop={BUTTON_HIT_SLOP}>
           <ThemedText>-</ThemedText>
         </ThemedTouchableOpacity>
         <ThemedText>{count}</ThemedText>
         <ThemedTouchableOpacity
           style={styles.circleButton}
           colorName="backgroundSecond"
-          onPress={increment}>
+          onPress={increment}
+          hitSlop={BUTTON_HIT_SLOP}>
           <ThemedText>+</ThemedText>
         </ThemedTouchableOpacity>
       </View>
@@ -42,7 +46,7 @@ export const AddProductSmall = () => {
       onPress={increment}
       colorName="backgroundSecond"
       style={styles.container}
-      hitSlop={{top: 11, bottom: 11}}>
+      hitSlop={BUTTON_HIT_SLOP}>
       <ThemedText>+</ThemedText>
     </ThemedTouchableOpacity>
   );
