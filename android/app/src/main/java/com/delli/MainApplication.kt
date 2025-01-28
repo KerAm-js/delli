@@ -1,4 +1,5 @@
 package com.delli
+import com.oblador.vectoricons.VectorIconsPackage;
 
 import android.app.Application
 import com.facebook.react.PackageList
@@ -18,6 +19,7 @@ class MainApplication : Application(), ReactApplication {
       object : DefaultReactNativeHost(this) {
         override fun getPackages(): List<ReactPackage> =
             PackageList(this).packages.apply {
+              add(VectorIconsPackage())
               // Packages that cannot be autolinked yet can be added manually here, for example:
               // add(MyReactNativePackage())
             }

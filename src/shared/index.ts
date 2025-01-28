@@ -19,3 +19,7 @@ export {ThemedTouchableOpacity} from './ui/theme';
 export {ThemedText} from './ui/theme';
 export {ThemedView} from './ui/theme';
 export {ThemedScrollView} from './ui/theme';
+export {BigButton} from './ui/BigButton';
+export {InfoBlock} from './ui/InfoBlock';
+export {Input} from './ui/Input';
+export {TextArea} from './ui/TextArea';
